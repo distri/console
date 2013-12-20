@@ -38,3 +38,14 @@ Send messages to parent window or opener window.
         opener?.postMessage data, "*"
       else
         parent.postMessage data, "*"
+
+Receive errors and results from parent or opener.
+
+      eventProcessor = (event) ->
+        if event.source is parent or event.source is opener
+          if results = event.data?.results
+            console.log results
+          else if error = event.data?.error
+            console.error error
+
+      addEventListener "message", eventProcessor, false
