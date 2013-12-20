@@ -36,7 +36,9 @@
 browser as well, all results will be displayed in dev console.</p>
 
             </div>
-            <div class="content"><pre><code class="lang-coffeescript">input = document.createElement <span class="string">"textarea"</span>
+            <div class="content"><pre><code class="lang-coffeescript">require <span class="string">"appcache"</span>
+
+input = document.createElement <span class="string">"textarea"</span>
 input.<span class="function"><span class="title">onkeydown</span></span> = (e) -&gt;
   <span class="keyword">if</span> e.keyCode <span class="keyword">is</span> <span class="number">13</span> <span class="keyword">and</span> e.shiftKey
     e.preventDefault()
