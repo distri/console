@@ -31,5 +31,10 @@ browser as well, all results will be displayed in dev console.
     
     document.head.appendChild styleNode
 
+Send messages to parent window or opener window.
+
     send = (data) ->
-      opener?.postMessage data, "*"
+      if parent == window
+        opener?.postMessage data, "*"
+      else
+        parent.postMessage data, "*"
