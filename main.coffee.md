@@ -42,8 +42,8 @@ Send messages to parent window or opener window.
 Receive errors and results from parent or opener.
 
       eventProcessor = (event) ->
-        if event.source is parent or event.source is opener
-          if results = event.data?.results
+        if (event.source is parent) or (event.source is opener)
+          if result = event.data?.result
             console.log results
           else if error = event.data?.error
             console.error error
