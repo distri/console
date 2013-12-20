@@ -92,8 +92,8 @@ document.head.appendChild styleNode</code></pre>
 
             </div>
             <div class="content"><pre><code class="lang-coffeescript">  <span class="function"><span class="title">eventProcessor</span></span> = (event) -&gt;
-    <span class="keyword">if</span> event.source <span class="keyword">is</span> parent <span class="keyword">or</span> event.source <span class="keyword">is</span> opener
-      <span class="keyword">if</span> results = event.data?.results
+    <span class="keyword">if</span> (event.source <span class="keyword">is</span> parent) <span class="keyword">or</span> (event.source <span class="keyword">is</span> opener)
+      <span class="keyword">if</span> result = event.data?.result
         console.log results
       <span class="keyword">else</span> <span class="keyword">if</span> error = event.data?.error
         console.error error
