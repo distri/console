@@ -41,11 +41,11 @@ Send messages to parent window or opener window.
 
 Receive errors and results from parent or opener.
 
-      eventProcessor = (event) ->
-        if (event.source is parent) or (event.source is opener)
-          if result = event.data?.result
-            console.log result
-          else if error = event.data?.error
-            console.error error
+    eventProcessor = (event) ->
+      if (event.source is parent) or (event.source is opener)
+        if result = event.data?.result
+          console.log result
+        else if error = event.data?.error
+          console.error error
 
-      addEventListener "message", eventProcessor, false
+    addEventListener "message", eventProcessor, false
