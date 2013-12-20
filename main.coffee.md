@@ -4,6 +4,8 @@ Main
 This is a hybrid console, intended to be used with the developer console in the
 browser as well, all results will be displayed in dev console.
 
+    require "appcache"
+
     input = document.createElement "textarea"
     input.onkeydown = (e) ->
       if e.keyCode is 13 and e.shiftKey
