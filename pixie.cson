@@ -1,6 +1,6 @@
 version: "0.1.0"
 remoteDependencies: [
-  "https://cdnjs.cloudflare.com/ajax/libs/coffee-script/1.6.3/coffee-script.min.js"
+  "https://cdnjs.cloudflare.com/ajax/libs/coffee-script/1.7.1/coffee-script.min.js"
 ]
 dependencies:
   appcache: "distri/appcache:v0.2.0"

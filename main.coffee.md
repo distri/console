@@ -12,13 +12,13 @@ browser as well, all results will be displayed in dev console.
         e.preventDefault()
 
         text = input.value
-        
+
         try
           code = CoffeeScript.compile text, bare: true
 
           send
             code: code
-          
+
           input.value = ""
 
         catch e
@@ -28,8 +28,10 @@ browser as well, all results will be displayed in dev console.
 
     styleNode = document.createElement("style")
     styleNode.innerHTML = require "./style"
-    
+
     document.head.appendChild styleNode
+
+TODO: Use Postmaster
 
 Send messages to parent window or opener window.
 
